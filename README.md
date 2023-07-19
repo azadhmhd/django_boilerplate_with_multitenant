@@ -1,6 +1,6 @@
-# Django Minimal Boilerplate
+# Django Multitenant Boilerplate
 
-Django Minimal Boilerplate is a minimalistic Django project template that provides a starting point for your Django web applications. It includes essential configurations, directory structure, and a set of useful features to kickstart your development process.
+Django Multitenant Boilerplate is a comprehensive Django project template designed to kickstart your development process for building multi-tenant web applications. It includes all the features from the original Minimal Boilerplate and introduces additional functionality for handling multiple tenants in your Django application.
 
 ## Features
 
@@ -10,7 +10,12 @@ Django Minimal Boilerplate is a minimalistic Django project template that provid
 - Database configuration: Pre-configured to use PostgreSQL by default, but you can easily switch to other databases like SQLite or MySQL.
 - Environment variables: Uses the python-decouple library to manage environment variables for your local development and production deployment.
 - Debug toolbar: Includes Django Debug Toolbar to assist with debugging during development.
-
+- Multitenancy support: Built-in support for handling multiple tenants within the same Django application.
+## Multitenancy Features
+- Tenant model and schema: The boilerplate includes a **`Tenant`** model and sets up a separate schema for each tenant in the database. This allows you to isolate data between tenants securely.
+- Tenant-specific settings: Provides the ability to have tenant-specific settings, enabling you to customize various aspects of your application for each tenant.
+- Middleware for authentication: Includes middleware to handle tenant authentication and routing requests to the appropriate tenant's schema based on the URL or a custom header.
+- Tenant management commands: Comes with management commands to create new tenants, set tenant-specific settings, and perform tenant-related tasks.
 ## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
@@ -26,7 +31,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/azadhmhd/django_minimal_boilerplate.git
+git clone https://github.com/azadhmhd/django_boilerplate_with_multitenant.git
 ```
 
 2. Create a virtual environment and activate it:
@@ -86,6 +91,7 @@ We would like to acknowledge the following resources and projects that inspired 
 
 - Django
 - PostgreSQL
+- Django_multitenant
 
 ### Contact
 
@@ -93,6 +99,6 @@ If you have any questions or suggestions, feel free to contact us at azadhmhd@gm
 
 
 ```shell
-Feel free to customize and expand this README file to provide more detailed information about your Django Minimal Boilerplate project.
+Feel free to customize and expand this README file to provide more detailed information about your Django Multitenant Boilerplate project.
 
 ```
